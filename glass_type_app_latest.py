@@ -196,13 +196,13 @@ if classifier == 'Support Vector Machine':
         glass_type = prediction(svc_model, [ri, na, mg, al, si, k, ca, ba, fe])
         st.write("The Type of glass predicted is:", glass_type)
         st.write("Accuracy", accuracy.round(2))
-        #plot_confusion_matrix(svc_model, X_test, y_test)
-        #st.pyplot()
-        #st.write(confusion_matrix( y_test, y_pred))
-        cm = confusion_matrix(y_test, y_pred, labels=svc_model.classes_)
-        ConfusionMatrixDisplay(confusion_matrix=cm,display_labels=svc_model.classes_)
-        #ConfusionMatrixDisplay.from_estimator(y_test, y_pred)
+        plot_confusion_matrix(svc_model, X_test, y_test)
         st.pyplot()
+        #st.write(confusion_matrix( y_test, y_pred))
+        #cm = confusion_matrix(y_test, y_pred, labels=svc_model.classes_)
+        #ConfusionMatrixDisplay(confusion_matrix=cm,display_labels=svc_model.classes_)
+        #ConfusionMatrixDisplay.from_estimator(y_test, y_pred)
+        #st.pyplot()
 
 
 # S5.1: ImplementRandom Forest Classifier with hyperparameter tuning.
@@ -224,11 +224,11 @@ if classifier =='Random ForestClassifier':
         glass_type = prediction(rf_clf, [ri, na, mg, al, si, k, ca, ba, fe])
         st.write("The Type of glass predicted is:", glass_type)
         st.write("Accuracy", accuracy.round(2))
-        #plot_confusion_matrix(rf_clf, X_test, y_test)
+        plot_confusion_matrix(rf_clf, X_test, y_test)
 
-        #st.pyplot()
-        ConfusionMatrixDisplay.from_estimator(y_test, y_pred)
         st.pyplot()
+        #ConfusionMatrixDisplay.from_estimator(y_test, y_pred)
+        #st.pyplot()
 
 
 #Class 96
@@ -249,8 +249,8 @@ if classifier == 'Logistic Regression':
         glass_type = prediction(log_reg, [ri, na, mg, al, si, k, ca, ba, fe])
         st.write("The Type of glass predicted is:", glass_type)
         st.write("Accuracy", accuracy.round(2))
-        #plot_confusion_matrix(log_reg, X_test, y_test)
-        #st.pyplot()
-        ConfusionMatrixDisplay.from_estimator(y_test, y_pred)
+        plot_confusion_matrix(log_reg, X_test, y_test)
         st.pyplot()
+        #ConfusionMatrixDisplay.from_estimator(y_test, y_pred)
+        #st.pyplot()
 

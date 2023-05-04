@@ -45,7 +45,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, rando
 
 feature_cols = ['RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe']
 
-@st.cache_data
+@st.cache()
 def prediction(_model, feat_col):
     glass_type = _model.predict([feat_col])
     glass_type = glass_type[0]

@@ -199,9 +199,9 @@ if classifier == 'Support Vector Machine':
         #plot_confusion_matrix(svc_model, X_test, y_test)
         #st.pyplot()
         #st.write(confusion_matrix( y_test, y_pred))
-        #cm = confusion_matrix(y_test, y_pred, labels=svc_model.classes_)
-        #ConfusionMatrixDisplay(confusion_matrix=cm,display_labels=svc_model.classes_)
-        ConfusionMatrixDisplay.from_estimator(y_test, y_pred)
+        cm = confusion_matrix(y_test, y_pred, labels=svc_model.classes_)
+        ConfusionMatrixDisplay(confusion_matrix=cm,display_labels=svc_model.classes_)
+        #ConfusionMatrixDisplay.from_estimator(y_test, y_pred)
         st.pyplot()
 
 

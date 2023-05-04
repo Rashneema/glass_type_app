@@ -201,7 +201,7 @@ if classifier == 'Support Vector Machine':
         #st.write(confusion_matrix( y_test, y_pred))
         #cm = confusion_matrix(y_test, y_pred, labels=svc_model.classes_)
         #ConfusionMatrixDisplay(confusion_matrix=cm,display_labels=svc_model.classes_)
-        ConfusionMatrixDisplay.from_predictions(y_test, y_pred)
+        ConfusionMatrixDisplay..from_estimator(y_test, y_pred)
         st.pyplot()
 
 
@@ -227,7 +227,7 @@ if classifier =='Random ForestClassifier':
         #plot_confusion_matrix(rf_clf, X_test, y_test)
 
         #st.pyplot()
-        ConfusionMatrixDisplay.from_predictions(y_test, y_pred)
+        ConfusionMatrixDisplay..from_estimator(y_test, y_pred)
         st.pyplot()
 
 
@@ -251,6 +251,6 @@ if classifier == 'Logistic Regression':
         st.write("Accuracy", accuracy.round(2))
         #plot_confusion_matrix(log_reg, X_test, y_test)
         #st.pyplot()
-        ConfusionMatrixDisplay.from_predictions(y_test, y_pred)
+        ConfusionMatrixDisplay..from_estimator(y_test, y_pred)
         st.pyplot()
 
